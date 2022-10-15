@@ -15,38 +15,6 @@
     <li><a href="./ver3/">ver.3</a></li>
     <li><a href="./ver4/">ver.4</a></li>
   </ul>
-  <hr>
-
-  <div id="screen">0</div>
-  <button>클릭하면 일시정지</button>
-
-  <script>
-    const $screen = document.getElementById('screen');
-    const $button = document.querySelector('button');
-    let number = 1;
-    let trigger = true;
-
-    console.log($screen);
-
-    let intervalId = setInterval(() => {
-      $screen.textContent = number++;
-    }, 1000);
-
-    $button.addEventListener('click', () => {
-      if (trigger) {
-        clearInterval(intervalId);
-        $button.textContent = '클릭하면 다시 시작';
-        trigger = !trigger;
-      } else {
-        clearInterval(intervalId);
-        intervalId = setInterval(() => {
-          $screen.textContent = number++;
-        }, 1000);
-        $button.textContent = '클릭하면 일시정지';
-        trigger = !trigger;
-      }
-    });
-  </script>
 </body>
 
 </html>
