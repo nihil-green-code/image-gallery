@@ -28,14 +28,19 @@ div#main_container img {
 div.nation_container {
   display: flex;
   flex-direction: row;
-  gap: 5px;
+  gap: 10px;
 }
 
-div.nation_container a.nationBox {
+a.nationBox {
   width: 30px;
   line-height: 30px;
   text-align: center;
   text-decoration: none;
-  background-color: #888888;
-  color: #ffffff90;
+  background-color: #aaaaaa;
+  color: #ffffffa0;
+}
+
+a.nationBox.active {
+  background-color: #555555;
+  color: #ffffff;
 }
