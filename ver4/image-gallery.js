@@ -24,9 +24,6 @@ function imageSlide() {
 
 for (let i = 0; i < images.length; i++) {
   images[i] = `img${i + 1}`;
-}
-
-for (let i = 0; i < images.length; i++) {
   $nation_container.innerHTML += `<a href="#" class="nationBox nation${i + 1}">${i + 1}</a>`;
 }
 
