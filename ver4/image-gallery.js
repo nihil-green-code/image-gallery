@@ -31,11 +31,15 @@ $nationBox[0].classList.add('active');
 
 for (let i = 0; i < $nationBox.length; i++) {
   $nationBox[i].addEventListener('click', function () {
-    for (let j = 0; j < $nationBox.length; j++) $nationBox[j].classList.remove('active');
-
-    $img.src = `../images/${images[i]}.jpg`;
-    indexNumber = i;
-    this.classList.add('active');
+    for (let j = 0; j < $nationBox.length; j++) {
+      if (i === j) {
+        $img.src = `../images/${images[i]}.jpg`;
+        this.classList.add('active');
+        indexNumber = i;
+      } else {
+        $nationBox[j].classList.remove('active');
+      }
+    }
   });
 }
 
