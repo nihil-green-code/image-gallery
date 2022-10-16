@@ -1,10 +1,10 @@
 'use strict';
 
 const $img = document.querySelector('img');
-const $nation_container = document.querySelector('div.nation_container');
+const $nation_container = document.querySelector('.nation_container');
 const $nationBox = document.getElementsByClassName('nationBox');
-const $main_container = document.querySelector('div#main_container');
-const imageCount = 7;
+const $main_container = document.querySelector('#main_container');
+const imageCount = 8;
 const images = new Array(imageCount);
 
 let indexNumber = 1, trigger = true;
@@ -37,6 +37,7 @@ for (let i = 0; i < $nationBox.length; i++) {
     for (let j = 0; j < $nationBox.length; j++) $nationBox[j].classList.remove('active');
 
     $img.src = `../images/${images[i]}.jpg`;
+    indexNumber = i;
     this.classList.add('active');
   });
 }

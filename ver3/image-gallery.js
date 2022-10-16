@@ -1,6 +1,6 @@
 'use strict';
 
-const imageCount = 7;
+const imageCount = 8;
 const images = new Array(imageCount);
 
 for (let i = 0; i < images.length; i++) {

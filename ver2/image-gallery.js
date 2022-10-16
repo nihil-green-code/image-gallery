@@ -8,7 +8,7 @@ for (let i = 0; i < images.length; i++) {
 }
 
 const $img = document.querySelector('img');
-const $nation_container = document.querySelector('div.nation_container');
+const $nation_container = document.querySelector('.nation_container');
 const $nationBox = document.getElementsByClassName('nationBox');
 
 for (let i = 5; i < images.length; i++) {
