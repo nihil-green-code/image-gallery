@@ -1,36 +1,37 @@
 'use strict';
 
-// HTML 태그 불러옴
-const $img = document.querySelector('img');
-const $nation_container = document.querySelector('.nation_container');
-const $nationBox = document.getElementsByClassName('nationBox');
+const $container = document.getElementById('main_container'),
+  $img = $container.querySelector('img'),
+  $nation_container = $container.querySelector('.nation_container');
 
-// 이미지 개수
-const imageCount = 8;
-const images = new Array(imageCount);
+const images = [
+  '../images/img1.jpg',
+  '../images/img2.jpg',
+  '../images/img3.jpg',
+  '../images/img4.jpg',
+  '../images/img5.jpg',
+  '../images/iu.jpg',
+  '../images/arin.jpg',
+  '../images/shin-saekyeong.jpg',
+];
 
-// 마찬가지로 배열에 이미지 이름 넣음.
-for (let i = 0; i < images.length; i++) {
-  images[i] = `img${i + 1}`;
-}
-
-// 이미지 개수만큼 링크 생성. 버전 2와는 다르게 0부터 시작해야함.
 for (let i = 0; i < images.length; i++) {
   $nation_container.innerHTML += `<a href="#" class="nationBox nation${i + 1}">${i + 1}</a>`;
 }
 
-// 생략
-$nationBox[0].classList.add('active');
+// ==================== 실행 ====================
+
+const $nationBox = $container.getElementsByClassName('nationBox');
+let tmp = $nationBox[0];
+
+function imageChange() {
+  $img.setAttribute('src', images[this.textContent - 1]);
+  tmp.style.opacity = '.3';
+  this.style.opacity = '1';
+
+  tmp = this;
+}
 
 for (let i = 0; i < $nationBox.length; i++) {
-  $nationBox[i].addEventListener('click', function () {
-    for (let j = 0; j < $nationBox.length; j++) {
-      if (i === j) {
-        $img.src = `../images/${images[i]}.jpg`;
-        this.classList.add('active');
-      } else {
-        $nationBox[j].classList.remove('active');
-      }
-    }
-  });
+  $nationBox[i].addEventListener('click', imageChange);
 }

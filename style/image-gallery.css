@@ -36,11 +36,11 @@ a.nationBox {
   line-height: 30px;
   text-align: center;
   text-decoration: none;
-  background-color: #aaaaaa;
-  color: #ffffffa0;
-}
-
-a.nationBox.active {
   background-color: #555555;
   color: #ffffff;
+  opacity: 0.3;
+}
+
+a.nationBox.nation1 {
+  opacity: 1;
 }
