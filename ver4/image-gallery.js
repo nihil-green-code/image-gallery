@@ -29,7 +29,7 @@ let tmp = $nationBox[0];
 let intervalId, trigger = true;
 
 function slide() {
-  const computedIndex = tmp.textContent % images.length;
+  let computedIndex = tmp.textContent % images.length;
 
   $img.setAttribute('src', images[computedIndex]);
   tmp.style.opacity = '.3';
