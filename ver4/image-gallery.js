@@ -49,8 +49,9 @@ start();
 
 $container.addEventListener('click', function () {
   if (trigger) {
-    stop()
+    stop();
   }
+  
   else {
     start();
   }
