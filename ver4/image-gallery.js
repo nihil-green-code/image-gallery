@@ -50,9 +50,7 @@ start();
 $container.addEventListener('click', function () {
   if (trigger) {
     stop();
-  }
-  
-  else {
+  } else {
     start();
   }
 
